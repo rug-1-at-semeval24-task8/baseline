@@ -1,6 +1,4 @@
-2023-09-29
-
-python feature_baseline.py -t a_mono -m NB -f 1.0
+--- Now running task a_mono with model NB on 100% of the data---
               precision    recall  f1-score   support
 
            0       0.52      0.66      0.59      2500
@@ -12,6 +10,81 @@ weighted avg       0.53      0.53      0.52      5000
 
 [[1662  838]
  [1510  990]]
+
+Hábrók Cluster
+Job 4838007 for user 's5640954'
+Finished at: Sat Sep 30 11:10:20 CEST 2023
+
+Job details:
+============
+
+Job ID              : 4838007
+Name                : jobscript.sh
+User                : s5640954
+Partition           : regularshort
+Nodes               : node106
+Number of Nodes     : 1
+Cores               : 1
+Number of Tasks     : 1
+State               : COMPLETED
+Submit              : 2023-09-30T11:09:01
+Start               : 2023-09-30T11:09:02
+End                 : 2023-09-30T11:10:19
+Reserved walltime   : 01:00:00
+Used walltime       : 00:01:17
+Used CPU time       : 00:01:14 (efficiency: 97.00%)
+% User (Computation): 96.59%
+% System (I/O)      :  3.41%
+Mem reserved        : 6G
+Max Mem (Node/step) : 3.19G (node106, per node)
+Full Max Mem usage  : 3.19G
+Total Disk Read     : 13.57M
+Total Disk Write    : 730.25K
+
+
+--- Now running task a_multi with model NB on 100% of the data---
+              precision    recall  f1-score   support
+
+           0       0.51      0.77      0.61      2000
+           1       0.54      0.27      0.36      2000
+
+    accuracy                           0.52      4000
+   macro avg       0.52      0.52      0.49      4000
+weighted avg       0.52      0.52      0.49      4000
+
+[[1532  468]
+ [1458  542]]
+
+Hábrók Cluster
+Job 4838544 for user 's5640954'
+Finished at: Sat Sep 30 14:35:22 CEST 2023
+
+Job details:
+============
+
+Job ID              : 4838544
+Name                : jobscript.sh
+User                : s5640954
+Partition           : regularshort
+Nodes               : node106
+Number of Nodes     : 1
+Cores               : 1
+Number of Tasks     : 1
+State               : COMPLETED
+Submit              : 2023-09-30T14:33:35
+Start               : 2023-09-30T14:33:35
+End                 : 2023-09-30T14:35:22
+Reserved walltime   : 01:00:00
+Used walltime       : 00:01:47
+Used CPU time       : 00:01:42 (efficiency: 95.96%)
+% User (Computation): 95.81%
+% System (I/O)      :  4.19%
+Mem reserved        : 6G
+Max Mem (Node/step) : 5.09G (node106, per node)
+Full Max Mem usage  : 5.09G
+Total Disk Read     : 13.57M
+Total Disk Write    : 730.25K
+
 
 python feature_baseline.py -t a_mono -m RF -f 1.0
               precision    recall  f1-score   support
