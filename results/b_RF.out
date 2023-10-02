@@ -1,0 +1,71 @@
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) 2023.01   2) StdEnv
+Requirement already satisfied: scikit-learn in /cvmfs/hpc.rug.nl/versions/2023.01/rocky8/x86_64/amd/zen3/software/scikit-learn/1.1.2-foss-2022a/lib/python3.10/site-packages (from -r requirements.txt (line 1)) (1.1.2)
+Requirement already satisfied: scipy>=1.3.2 in /cvmfs/hpc.rug.nl/versions/2023.01/rocky8/x86_64/amd/zen3/software/SciPy-bundle/2022.05-foss-2022a/lib/python3.10/site-packages (from scikit-learn->-r requirements.txt (line 1)) (1.8.1)
+Requirement already satisfied: joblib>=1.0.0 in /cvmfs/hpc.rug.nl/versions/2023.01/rocky8/x86_64/amd/zen3/software/Python/3.10.4-GCCcore-11.3.0/lib/python3.10/site-packages (from scikit-learn->-r requirements.txt (line 1)) (1.1.0)
+Requirement already satisfied: numpy>=1.17.3 in /cvmfs/hpc.rug.nl/versions/2023.01/rocky8/x86_64/amd/zen3/software/SciPy-bundle/2022.05-foss-2022a/lib/python3.10/site-packages (from scikit-learn->-r requirements.txt (line 1)) (1.22.3)
+Requirement already satisfied: threadpoolctl>=2.0.0 in /cvmfs/hpc.rug.nl/versions/2023.01/rocky8/x86_64/amd/zen3/software/Python/3.10.4-GCCcore-11.3.0/lib/python3.10/site-packages (from scikit-learn->-r requirements.txt (line 1)) (3.1.0)
+WARNING: You are using pip version 22.0.4; however, version 23.2.1 is available.
+You should consider upgrading via the '/cvmfs/hpc.rug.nl/versions/2023.01/rocky8/x86_64/amd/zen3/software/Python/3.10.4-GCCcore-11.3.0/bin/python -m pip install --upgrade pip' command.
+--- Now running task b with model RF on 100% of the data---
+              precision    recall  f1-score   support
+
+           0       0.62      0.31      0.41       500
+           1       0.63      0.58      0.60       500
+           2       0.38      0.09      0.15       500
+           3       0.39      0.78      0.52       500
+           4       0.90      0.99      0.94       500
+           5       0.39      0.47      0.43       500
+
+    accuracy                           0.54      3000
+   macro avg       0.55      0.54      0.51      3000
+weighted avg       0.55      0.54      0.51      3000
+
+[[155  13  27 115  55 135]
+ [  0 288   8 163   0  41]
+ [  5  69  46 234   1 145]
+ [  0  51  11 392   0  46]
+ [  0   0   0   4 496   0]
+ [ 91  37  29 104   2 237]]
+
+###############################################################################
+Hábrók Cluster
+Job 4838977 for user 's5640954'
+Finished at: Sat Sep 30 15:43:04 CEST 2023
+
+Job details:
+============
+
+Job ID              : 4838977
+Name                : b_RF.sh
+User                : s5640954
+Partition           : regularshort
+Nodes               : node106
+Number of Nodes     : 1
+Cores               : 1
+Number of Tasks     : 1
+State               : COMPLETED
+Submit              : 2023-09-30T15:34:24
+Start               : 2023-09-30T15:34:25
+End                 : 2023-09-30T15:43:04
+Reserved walltime   : 01:00:00
+Used walltime       : 00:08:39
+Used CPU time       : 00:08:31 (efficiency: 98.58%)
+% User (Computation): 99.59%
+% System (I/O)      :  0.41%
+Mem reserved        : 6G
+Max Mem (Node/step) : 1.53G (node106, per node)
+Full Max Mem usage  : 1.53G
+Total Disk Read     : 13.57M
+Total Disk Write    : 730.25K
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Hábrók in your publications:
+
+https://wiki.hpc.rug.nl/habrok/introduction/scientific_output
+
+################################################################################
