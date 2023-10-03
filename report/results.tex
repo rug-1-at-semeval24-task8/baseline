@@ -1,42 +1,39 @@
-\documentclass[11pt]{article}
+% !TeX program = xelatex
+\documentclass[11pt, convert]{standalone}
 
 \usepackage{times}
 \usepackage{latexsym}
 \usepackage{booktabs}
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
 \usepackage{microtype}
 \usepackage{inconsolata}
-
 \begin{document}
 
-\begin{table*}[]
-	\begin{tabular}{llrrrr}
-		\toprule
-		Task             & Model                  & Percision     & Recall        & F1-score      & Accuracy      \\
-		\midrule
-		A (monolingual)  &                        &               &               &               &               \\
-		                 & Naive Bayes            & 0.53          & 0.53          & 0.52          & 0.53          \\
-		                 & Decision Tree          & 0.64          & \textbf{0.63} & \textbf{0.62} & \textbf{0.63} \\
-		                 & Random Forest          & \textbf{0.68} & 0.62          & 0.58          & 0.62          \\
-		                 & K-Nearest Neighbors    & 0.54          & 0.54          & 0.54          & 0.54          \\
-		                 & Support Vector Machine & 0.62          & 0.59          & 0.56          & 0.59          \\
-		\midrule
-		A (multilingual) &                        &               &               &               &               \\
-		                 & Naive Bayes            & 0.52          & 0.52          & 0.49          & 0.52          \\
-		                 & Decision Tree          & 0.49          & 0.49          & 0.48          & 0.49          \\
-		                 & Random Forest          & \textbf{0.55} & \textbf{0.54} & \textbf{0.52} & \textbf{0.54} \\
-		                 & K-Nearest Neighbors    & 0.49          & 0.50          & 0.40          & 0.50          \\
-		                 & Support Vector Machine & 0.43          & 0.46          & 0.40          & 0.46          \\
-		\midrule
-		B                &                        &               &               &               &               \\
-		                 & Naive Bayes            & 0.56          & 0.51          & 0.47          & 0.51          \\
-		                 & Decision Tree          & 0.36          & 0.35          & 0.35          & 0.35          \\
-		                 & Random Forest          & 0.55          & \textbf{0.54} & 0.51          & \textbf{0.54} \\
-		                 & K-Nearest Neighbors    & 0.19          & 0.18          & 0.07          & 0.18          \\
-		                 & Support Vector Machine & \textbf{0.62} & \textbf{0.54} & \textbf{0.54} & \textbf{0.54} \\
-		\bottomrule
-	\end{tabular}
-\end{table*}
+\begin{tabular}{llrrrr}
+	\toprule
+	Task             & Model                  & Percision     & Recall        & F1-score      & Accuracy      \\
+	\midrule
+	A (monolingual)  &                        &               &               &               &               \\
+									 & Naive Bayes            & 0.53          & 0.53          & 0.52          & 0.53          \\
+									 & Decision Tree          & 0.64          & \textbf{0.63} & \textbf{0.62} & \textbf{0.63} \\
+									 & Random Forest          & \textbf{0.68} & 0.62          & 0.58          & 0.62          \\
+									 & K-Nearest Neighbors    & 0.54          & 0.54          & 0.54          & 0.54          \\
+									 & Support Vector Machine & 0.62          & 0.59          & 0.56          & 0.59          \\
+	\midrule
+	A (multilingual) &                        &               &               &               &               \\
+									 & Naive Bayes            & 0.52          & 0.52          & 0.49          & 0.52          \\
+									 & Decision Tree          & 0.49          & 0.49          & 0.48          & 0.49          \\
+									 & Random Forest          & \textbf{0.55} & \textbf{0.54} & \textbf{0.52} & \textbf{0.54} \\
+									 & K-Nearest Neighbors    & 0.49          & 0.50          & 0.40          & 0.50          \\
+									 & Support Vector Machine & 0.43          & 0.46          & 0.40          & 0.46          \\
+	\midrule
+	B                &                        &               &               &               &               \\
+									 & Naive Bayes            & 0.56          & 0.51          & 0.47          & 0.51          \\
+									 & Decision Tree          & 0.36          & 0.35          & 0.35          & 0.35          \\
+									 & Random Forest          & 0.55          & \textbf{0.54} & 0.51          & \textbf{0.54} \\
+									 & K-Nearest Neighbors    & 0.19          & 0.18          & 0.07          & 0.18          \\
+									 & Support Vector Machine & \textbf{0.62} & \textbf{0.54} & \textbf{0.54} & \textbf{0.54} \\
+	\bottomrule
+\end{tabular}
 
 \end{document}
