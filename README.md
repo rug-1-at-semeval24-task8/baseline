@@ -32,7 +32,7 @@ python feature_baseline.py [options]
 | Argument | Description |
 | --- | --- |
 | `-t`<br/>`--task` | Specify which task to run <br/> Values: `a_mono, a_multi, b, c` |
-| `-m`<br/>`--model` | Specify which model to use <br/> Values: `NB, DT, RF, KNN, SVM, SGD`* <br/> * only use for task C in  regression mode |
+| `-m`<br/>`--model` | Specify which model to use <br/> Values: `NB, DT, RF, KNN, SVM, SGD`* <br/> * SGD is only use for task C in  regression mode |
 | `-cm`<br/>`--c_method` | Specify which method to use for task C <br/> Values: `regression, split` <br/> <b>`regression`</b> method uses a regression model specified by `-m` trained on subtask C data. <b>`split`</b> method uses a classifier model specified by `-m` trained on subtask A (monolingual) data and employing a split-method specified by `-sm`.|
 | `-sm`<br/>`--split_method` | Specify which split-method to use for task C in split mode <br/> Values: `first, max, binary` <br/> <b>`first`</b> picks the index of the first token which is classified as machine-generated. <b>`max`</b> scores all possible splits and selects the best one. <b>`binary`</b> uses binary search to find the point of change. |
 | `-f`<br/>`--fraction` | Specify what fraction of the data to use <br/> Default is 1.0 (=100%)
