@@ -2,3 +2,5 @@ data/
 jobscripts/
 Makefile
 .vscode/
+report/
+baseline-to-upload/

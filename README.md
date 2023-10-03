@@ -2,6 +2,16 @@
 
 Note that the data itself is not provided here. You may find it at [mbzuai0nlp/SemEval2024-task8](https://github.com/mbzuai-nlp/SemEval2024-task8).
 
+The code assumes that the data is structured like the official data-set, and is located in `./data/`:
+```
+- project
+  |- feature_baseline.py
+  |- data
+     |- SubtaskA...
+     |- SubtaskB...
+     |- SubtaskC...
+```
+
 ## Feature-based Baseline
 
 ### Setup
@@ -15,16 +25,6 @@ pip install scikit-learn
 
 ```
 python feature_baseline.py [options]
-```
-
-<b>Note:</b> the code assumes that the data is structured like the official data-set, and is located in `./data/`:
-```
-- project
-  |- feature_baseline.py
-  |- data
-     |- SubtaskA...
-     |- SubtaskB...
-     |- SubtaskC...
 ```
 
 #### Arguments
@@ -62,4 +62,40 @@ python feature_baseline.py -t c -cm regression -m SGD
 Subtask C using a Decision Tree model + binary split:
 ```
 python feature_baseline.py -t c -cm split -m DT -sm binary
+```
+
+## Transformer-based Baseline
+
+### Subtask A
+
+The code is provided as a jupyter notebook in file `llama_baseline_subtaskA.ipynb`. To run it, load the notebook in an appropriate platform and run the cells.
+
+### Subtask B
+
+#### Setup
+
+To install dependencies, run:
+```
+pip install transformers tensorflow pytorch scikit-learn pandas
+```
+
+#### Usage
+
+```
+python distilbert_baseline_subtaskB.py
+```
+
+### Subtask C
+
+#### Setup
+
+The code requires the <b>pytorch</b> and <b>numpy</b>. To install them, run:
+```
+pip install pytorch numpy
+```
+
+#### Usage
+
+```
+python lstm_baseline_subtaskC.py
 ```
