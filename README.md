@@ -89,7 +89,7 @@ python distilbert_baseline_subtaskB.py
 
 #### Setup
 
-The code requires the <b>pytorch</b> and <b>numpy</b>. To install them, run:
+The code requires <b>pytorch</b> and <b>numpy</b>. To install them, run:
 ```
 pip install pytorch numpy
 ```
