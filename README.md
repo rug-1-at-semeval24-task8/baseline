@@ -99,39 +99,3 @@ pip install pytorch numpy
 ```
 python lstm_baseline_subtaskC.py
 ```
-
-## Transformer-based Baseline
-
-### Subtask A
-
-The code is provided as a jupyter notebook in file `llama_baseline_subtaskA.ipynb`. To run it, load the notebook in an appropriate platform and run the cells.
-
-### Subtask B
-
-#### Setup
-
-To install dependencies, run:
-```
-pip install transformers tensorflow pytorch scikit-learn pandas
-```
-
-#### Usage
-
-```
-python distilbert_baseline_subtaskB.py
-```
-
-### Subtask C
-
-#### Setup
-
-The code requires the <b>pytorch</b> and <b>numpy</b>. To install them, run:
-```
-pip install pytorch numpy
-```
-
-#### Usage
-
-```
-python lstm_baseline_subtaskC.py
-```
