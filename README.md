@@ -32,7 +32,7 @@ python feature_baseline.py [options]
 | Argument | Description |
 | --- | --- |
 | `-t`<br/>`--task` | Specify which task to run <br/> Values: `a_mono, a_multi, b, c` |
-| `-m`<br/>`--model` | Specify which model to use <br/> Values: `NB, DT, RF, KNN, SVM, SGD`* <br/> * only use for task C in  regression mode |
+| `-m`<br/>`--model` | Specify which model to use <br/> Values: `NB, DT, RF, KNN, SVM, SGD`* <br/> * SGD is only used for task C in  regression mode |
 | `-cm`<br/>`--c_method` | Specify which method to use for task C <br/> Values: `regression, split` <br/> <b>`regression`</b> method uses a regression model specified by `-m` trained on subtask C data. <b>`split`</b> method uses a classifier model specified by `-m` trained on subtask A (monolingual) data and employing a split-method specified by `-sm`.|
 | `-sm`<br/>`--split_method` | Specify which split-method to use for task C in split mode <br/> Values: `first, max, binary` <br/> <b>`first`</b> picks the index of the first token which is classified as machine-generated. <b>`max`</b> scores all possible splits and selects the best one. <b>`binary`</b> uses binary search to find the point of change. |
 | `-f`<br/>`--fraction` | Specify what fraction of the data to use <br/> Default is 1.0 (=100%)
@@ -62,6 +62,42 @@ python feature_baseline.py -t c -cm regression -m SGD
 Subtask C using a Decision Tree model + binary split:
 ```
 python feature_baseline.py -t c -cm split -m DT -sm binary
+```
+
+## Transformer-based Baseline
+
+### Subtask A
+
+The code is provided as a jupyter notebook in file `llama_baseline_subtaskA.ipynb`. To run it, load the notebook in an appropriate platform and run the cells.
+
+### Subtask B
+
+#### Setup
+
+To install dependencies, run:
+```
+pip install transformers tensorflow pytorch scikit-learn pandas
+```
+
+#### Usage
+
+```
+python distilbert_baseline_subtaskB.py
+```
+
+### Subtask C
+
+#### Setup
+
+The code requires the <b>pytorch</b> and <b>numpy</b>. To install them, run:
+```
+pip install pytorch numpy
+```
+
+#### Usage
+
+```
+python lstm_baseline_subtaskC.py
 ```
 
 ## Transformer-based Baseline
